@@ -1,0 +1,12 @@
+{
+    "name": "abner/mini_forms_client",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/"
+        }
+    },
+    "require": {
+      "ext-pdo": "*"
+    }
+}
