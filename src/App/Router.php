@@ -34,11 +34,11 @@ class Router {
       return;
     }
 
-    // if ($uri == 'request') {
-    //   $request = new Request();
-    //   $request->response();
-    //   return;
-    // }
+    if ($uri == 'request') {
+      $request = new Request();
+      $request->response();
+      return;
+    }
 
     // If the uri is not found in addresses, NotFound is pointed to
     if (!$ADDRESS[$uri]) {
