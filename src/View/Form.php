@@ -14,8 +14,7 @@
 </head>
 <body>
   <p id="url" style="display: none;"><?= URL ?></p>
-  <!-- <p id="user" style="display: none;"><?= $_SESSION['user']['user_admin'] ?></p> -->
-  <p id="form_id" style="display: none;"><?= $_GET['id'] ?></p>
+  <p id="form_id" style="display: none;"><?= $_GET['form_id'] ?></p>
   <main>
     <form action="" method="POST">
 

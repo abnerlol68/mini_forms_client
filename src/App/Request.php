@@ -33,6 +33,26 @@ class Request {
       return;
     }
 
+    /*==== Check if exist previous answers by an user in a form ====*/
+
+    if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['req'] == 'exist_answers') {
+      $stm = $this->conn->prepare('
+        SELECT quests.id_form, quests.id_question, ans.id_answer, ans.email_graduate
+        FROM answers AS ans
+        JOIN questions AS quests
+        ON ans.id_question = quests.id_question
+        WHERE quests.id_form = :form_id AND ans.email_graduate = :email
+      ');
+      $stm->execute([
+        'form_id' => $_GET['form_id'],
+        'email' => $_GET['email']
+      ]);
+      $answers = $stm->fetchAll(PDO::FETCH_ASSOC);
+      echo json_encode($answers);
+      http_response_code(200);
+      return;
+    }
+
     echo 'Operation not available';
     http_response_code(400);
     return;

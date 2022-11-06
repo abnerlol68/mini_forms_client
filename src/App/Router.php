@@ -17,26 +17,21 @@ class Router {
       'thanks'    => ROOT . 'src/View/ThanksForResponse.php',
       'not_found' => ROOT . 'src/View/NotFound.php',
     ];
+    
+    if ($uri == 'request') {
+      $request = new Request();
+      $request->response();
+      return;
+    }
 
-    // if (!isset($_SESSION["user"])) {
-    //   require $ADDRESS['login'];
-    //   return;
-    // }
-
-    // if (isset($_SESSION["user"]) && $uri == 'login') {
-    //   require $ADDRESS['home'];
-    //   return;
-    // }
+    if (!isset($_SESSION["user"])) {
+      require $ADDRESS['login'];
+      return;
+    }
   
     // If uri is null, the request uri is point to home
     if (!$uri) {
       require $ADDRESS['login'];
-      return;
-    }
-
-    if ($uri == 'request') {
-      $request = new Request();
-      $request->response();
       return;
     }
 
