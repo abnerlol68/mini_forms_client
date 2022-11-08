@@ -33,6 +33,20 @@ class Request {
       return;
     }
 
+    /*==== Check if exist the email in the BD ====*/
+
+    if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['req'] == 'check_email') {
+      $stm = $this->conn->prepare('
+        SELECT email_graduate FROM graduates 
+        WHERE email_graduate = :email
+      ');
+      $stm->execute([ 'email' => $_GET['email'] ]);
+      $user_email = $stm->fetchAll(PDO::FETCH_ASSOC);
+      echo json_encode($user_email);
+      http_response_code(200);
+      return;
+    }
+
     /*==== Check if exist previous answers by an user in a form ====*/
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['req'] == 'exist_answers') {

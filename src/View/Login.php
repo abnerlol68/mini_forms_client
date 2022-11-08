@@ -11,32 +11,41 @@
       $errMsg = "Ingresa un correo valido.";
       return;
     }
-
+    
     $_SESSION['user'] = $_POST['email'];
     $form = $_GET['form_id'];
     $email = $_POST['email'];
-
+    
     // If in the URL doesn't exist a form_id, go to not found
     if (empty($form)) {
       require_once ROOT . 'src/View/NotFound.php';
       return;
     }
 
-    $res = file_get_contents(
-      URL . 'request/?req=exist_answers&email=' . $email . 
-      "&form_id=" . $form
+    $res_email = file_get_contents(
+      URL . 'request/?req=check_email&email=' . $email
     );
-    $answers = json_decode($res);
-
-    // If exist answer by an user in a form, go to thanks page
-    if (sizeof($answers) > 0) {
-      header('Location: ' . URL . 'thanks');
+    $user_email = json_decode($res_email);
+    
+    if (sizeof($user_email) !== 0) {
+      $res_ans = file_get_contents(
+        URL . 'request/?req=exist_answers&email=' . $email . 
+        "&form_id=" . $form
+      );
+      $answers = json_decode($res_ans);
+  
+      // If exist answer by an user in a form, go to thanks page
+      if (sizeof($answers) > 0) {
+        header('Location: ' . URL . 'thanks');
+        return;
+      }
+  
+      // Go to poll (form)
+      header('Location: ' . URL . 'form/?form_id=' . $form);
       return;
     }
 
-    // Go to poll (form)
-    header('Location: ' . URL . 'form/?form_id=' . $form);
-    return;
+    $errMsg = 'No puedes acceder';
   }
 ?>
 
@@ -61,6 +70,10 @@
       <!-- <input type="submit" value="Entrar" id="submit"> -->
       <button type="submit" id="submit">Entrar</button>
     </form>
+    <?php if ($errMsg): ?>
+      <!-- The style is temporal -->
+      <p class="text-danger" style="color: red;"><?= $errMsg ?></p>
+    <?php endif ?>
   </main>
 </body>
 </html>
