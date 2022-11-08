@@ -1,7 +1,7 @@
-<pre>
-  <?php
-  ?>
-</pre>
+<?php
+  // var_dump($_POST);
+  // die();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
   <p id="url" style="display: none;"><?= URL ?></p>
   <p id="form_id" style="display: none;"><?= $_GET['form_id'] ?></p>
   <main>
-    <form action="" method="POST">
+    <form action="<?= URL . 'submit/?form_id=' . $_GET['form_id'] ?>" method="POST">
 
     </form>
   </main>

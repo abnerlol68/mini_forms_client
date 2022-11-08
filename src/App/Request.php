@@ -53,6 +53,25 @@ class Request {
       return;
     }
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['req'] == 'add_answers') {
+      // $stm = $this->conn->prepare('
+      //   INSERT INTO answers (answer_answer, id_question, email_graduate) 
+      //   VALUES :answers;
+      // ');
+      // $stm->execute([ 'answers' => $_POST[0] ]);
+
+      $stm = $this->conn->prepare('
+        INSERT INTO answers (answer_answer, id_question, email_graduate) 
+        VALUES (:answer, :quest_id, :email)
+      ');
+      $stm->execute([
+        ':answer' => $_POST['answer'],
+        ':quest_id' => $_POST['quest_id'],
+        ':email' => $_POST['email']
+      ]);
+      return;
+    }
+
     echo 'Operation not available';
     http_response_code(400);
     return;

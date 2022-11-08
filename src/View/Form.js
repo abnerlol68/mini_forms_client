@@ -9,6 +9,12 @@ export default class View {
   async render() {
     const questions = await this.ctrlQuest.getQuestSet();
     questions.forEach(quest => this.createQuest(quest));
+
+    const submit = document.createElement('input');
+    submit.type = 'submit';
+    submit.value = 'Enviar';
+
+    this.form.appendChild(submit);
   }
 
   getElementId(id) {

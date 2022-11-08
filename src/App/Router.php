@@ -14,6 +14,7 @@ class Router {
     $ADDRESS = [
       'login'     => ROOT . 'src/View/Login.php',
       'form'      => ROOT . 'src/View/Form.php',
+      'submit'    => ROOT . 'src/Controller/Form.php',
       'thanks'    => ROOT . 'src/View/ThanksForResponse.php',
       'not_found' => ROOT . 'src/View/NotFound.php',
     ];
