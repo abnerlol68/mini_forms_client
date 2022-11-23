@@ -1,0 +1,9 @@
+@mixin animationButton($from, $to) {
+  from {
+    background-color: $from;
+  }
+  to {
+    background-color: $to;
+  }
+}
+

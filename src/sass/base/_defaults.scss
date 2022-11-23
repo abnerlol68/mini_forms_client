@@ -1,0 +1,57 @@
+@import "../utils/colors";
+@import "../utils/fonts";
+
+* {
+  font-family: $font1;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background-color: $background;
+  color: $text;
+  padding: 0;
+  margin: 0;
+  grid-template-rows: 45px auto 160px;
+  row-gap: 0;
+}
+
+@mixin maximumSize {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin layoutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+@mixin maxSize {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin setSize($widthP, $heightP,){
+  height: $heightP;
+  width: $widthP;
+}
+
+@mixin setSize($sizeS){
+  height: $sizeS;
+  width: $sizeS;
+}

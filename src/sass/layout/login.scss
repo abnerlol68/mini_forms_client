@@ -1,0 +1,98 @@
+@import "../base/defaults";
+@import "../utils/animatedBackgound";
+@import "../utils/_buttonCustom";
+@import "../utils/functions";
+
+
+
+body {
+  background-color: $iconsBg;
+}
+
+.wrapper {
+  position: absolute;
+  @include layoutGrid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: transparent;
+  padding: 50px;
+  border-radius: 5px;
+  height: 250px;
+  grid-template-rows: 20% 80%;
+
+  .wrapper__title {
+    color: $textSelected;
+    font-size: 50px;
+  }
+
+  .wrapper__form {
+    position: relative;
+    @include layoutGrid;
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 1rem;
+
+    .wrapper__form-label {
+      position: absolute;
+      top: 0;
+      margin-top: 5px;
+    }
+  }
+}
+
+$end: 150px;
+
+//.input-text:focus ~ .wrapper__form-label,
+//.input-text:defined ~ .wrapper__form-label{
+//  animation-name: moveTextUp;
+//  animation-duration: 1s;
+//  transform: translate($end, 0);
+//  color: white;
+//  background-color: $fuschia;
+//}
+
+.wrapper__form-label {
+  //color: $fuschia;
+  //background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+    transform: translate($end, 0);
+    color: white;
+    background-color: $fuschia;
+}
+
+
+.material-text {
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  width: 300px;
+  font-family: $font1;
+  font-size: 20px;
+  color: $btnBg2;
+  font-weight: bold;
+}
+
+
+//@keyframes moveTextUp {
+//  from {
+//    transform: translate(0, 0);
+//    color: $fuschia;
+//    background-color: white;
+//  }
+//  to {
+//    transform: translate($end,0 );
+//    color: white;
+//    background-color: $fuschia;
+//  }
+//}
+//
+//@keyframes moveTextDown {
+//  from {
+//    transform: translate($end, 0);
+//  }
+//  to {
+//    transform: translate(0, 0);
+//  }
+//}

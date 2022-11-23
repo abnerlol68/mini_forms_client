@@ -56,24 +56,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+    <link rel="stylesheet" href="src/css/login.css">
 </head>
 <body>
   <p id="url" style="display: none;"><?= URL ?></p>
   <p id="form" style="display: none;"><?= $_GET['form_id'] ?></p>
   <p id="session" style="display: none;"><?= var_dump($_SESSION) ?></p>
   
-  <h2>Login</h2>
-  <main>
-    <form method="post" action="#">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
-      <!-- <input type="submit" value="Entrar" id="submit"> -->
-      <button type="submit" id="submit">Entrar</button>
-    </form>
-    <?php if ($errMsg): ?>
-      <!-- The style is temporal -->
-      <p class="text-danger" style="color: red;"><?= $errMsg ?></p>
-    <?php endif ?>
+  <main id="body-login">
+
+      <div class="area" >
+          <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div >
+
+    <div class="wrapper">
+        <h1 class="wrapper__title">Corroboremos tus datos :)</h1>
+        <form method="post" action="#" class="wrapper__form">
+
+            <input type="email" name="email" id="email" class="material-text input-text" required>
+            <!-- <input type="submit" value="Entrar" id="submit"> -->
+            <button type="submit" id="submit" class="bubbly-button">Entrar</button>
+<!--            <button class="custom-btn btn-15">Read More</button>-->
+            <label for="email" class="wrapper__form-label">Correo</label>
+        </form>
+        <?php if ($errMsg): ?>
+            <!-- The style is temporal -->
+            <p class="text-danger" style="color: red;"><?= $errMsg ?></p>
+        <?php endif ?>
+    </div>
   </main>
 </body>
 </html>
