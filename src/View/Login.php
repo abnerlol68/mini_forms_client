@@ -57,6 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
     <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/libs/icons/font/typicons.css">
 </head>
 <body>
   <p id="url" style="display: none;"><?= URL ?></p>
@@ -88,7 +89,7 @@
             <!-- <input type="submit" value="Entrar" id="submit"> -->
             <button type="submit" id="submit" class="bubbly-button">Entrar</button>
 <!--            <button class="custom-btn btn-15">Read More</button>-->
-            <label for="email" class="wrapper__form-label">Correo</label>
+            <label for="email" class="typcn typcn-mail wrapper__form-label"></label>
         </form>
         <?php if ($errMsg): ?>
             <!-- The style is temporal -->

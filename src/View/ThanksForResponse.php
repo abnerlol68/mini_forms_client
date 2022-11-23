@@ -9,9 +9,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank For Response</title>
+    <link rel="stylesheet" href="src/css/thanks.css">
 </head>
 <body>
-  <h2>Thank For Response</h2>
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div >
+  <h1 class="material-text">¡Gracias por responder!</h1>
   <main></main>
 </body>
 </html>

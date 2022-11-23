@@ -1,0 +1,12 @@
+@import "../base/defaults";
+@import "../utils/animatedBackgound";
+
+.material-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: $textSelected;
+  font-weight: bold;
+  font-size: 80px;
+}

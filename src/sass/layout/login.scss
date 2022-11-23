@@ -42,24 +42,15 @@ body {
 
 $end: 150px;
 
-//.input-text:focus ~ .wrapper__form-label,
-//.input-text:defined ~ .wrapper__form-label{
-//  animation-name: moveTextUp;
-//  animation-duration: 1s;
-//  transform: translate($end, 0);
-//  color: white;
-//  background-color: $fuschia;
-//}
-
 .wrapper__form-label {
-  //color: $fuschia;
-  //background-color: white;
-  padding: 10px;
   border-radius: 10px;
   font-weight: bold;
     transform: translate($end, 0);
     color: white;
     background-color: $fuschia;
+  cursor: pointer;
+  font-size: 50px;
+  font-family: $fonti;
 }
 
 
@@ -72,27 +63,5 @@ $end: 150px;
   font-size: 20px;
   color: $btnBg2;
   font-weight: bold;
+  border: none;
 }
-
-
-//@keyframes moveTextUp {
-//  from {
-//    transform: translate(0, 0);
-//    color: $fuschia;
-//    background-color: white;
-//  }
-//  to {
-//    transform: translate($end,0 );
-//    color: white;
-//    background-color: $fuschia;
-//  }
-//}
-//
-//@keyframes moveTextDown {
-//  from {
-//    transform: translate($end, 0);
-//  }
-//  to {
-//    transform: translate(0, 0);
-//  }
-//}
