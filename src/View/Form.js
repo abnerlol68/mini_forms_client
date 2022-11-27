@@ -13,7 +13,7 @@ export default class View {
     const submit = document.createElement('input');
     submit.type = 'submit';
     submit.value = 'Enviar';
-
+    submit.className = 'bubbly-button';
     this.form.appendChild(submit);
   }
 
@@ -46,6 +46,7 @@ export default class View {
           type="text" 
           name="quest_name->${questId}" 
           id="quest_res->${questId}"
+          class="quest_res_text"
         >
       `;
       return;
@@ -65,7 +66,10 @@ export default class View {
 
   createOpt(opt, questType, container) {
     if (questType === 'radio') {
+      container.className = 'options multiple-box-option';
       const optInput = document.createElement('input');
+      const designInput = document.createElement('span');
+      designInput.className = 'radio-custom';
       optInput.type = 'radio';
       optInput.name = `quest_name->${opt.id_question}`;
       optInput.id = `quest_res->${opt.id_option}`;
@@ -74,13 +78,16 @@ export default class View {
       const optLabel = document.createElement('label');
       optLabel.setAttribute('for', `quest_res->${opt.id_option}`);
       optLabel.innerText = `${opt.description_option}`;
-
-      container.append(optInput, optLabel);
+      optLabel.style.height = '20px';
+      container.append(optInput, designInput, optLabel);
       return;
     }
 
     if (questType === 'checkbox') {
-      const optInput = document.createElement('input');
+      container.className = 'options multiple-box-option';
+      const optInput = document.createElement('input')
+      const designInput = document.createElement('span');
+      designInput.className = 'check-custom';
       optInput.type = 'checkbox';
       optInput.name = `quest_name->${opt.id_question}[]`;
       optInput.id = `quest_res->${opt.id_option}`;
@@ -89,8 +96,9 @@ export default class View {
       const optLabel = document.createElement('label');
       optLabel.setAttribute('for', `quest_res->${opt.id_option}`);
       optLabel.innerText = `${opt.description_option}`;
+      optLabel.style.height = '20px';
 
-      container.append(optInput, optLabel);
+      container.append(optInput, designInput, optLabel);
       return;
     }
 

@@ -37,7 +37,7 @@ class Router {
     }
 
     // If the uri is not found in addresses, NotFound is pointed to
-    if (!$ADDRESS[$uri]) {
+    if (!array_key_exists($uri, $ADDRESS)) {
       require $ADDRESS['not_found'];
       return;
     }

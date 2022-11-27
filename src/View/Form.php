@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="<?= URL . 'src/App/Form.js' ?>" type="module"></script>
   <title>Form</title>
+    <link rel="stylesheet" href="<?= URL . 'src/css/form.css' ?>">
 </head>
 <body>
   <p id="url" style="display: none;"><?= URL ?></p>

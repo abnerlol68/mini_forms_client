@@ -1,0 +1,32 @@
+@import "../base/defaults";
+
+* {
+  font-family: $font1;
+}
+
+body {
+  //display: grid;
+  grid-template-rows: 100%;
+}
+
+div {
+  display: grid;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+}
+
+#cod-error {
+  font: {
+    weight: bolder;
+    size: 60px;
+  }
+}
+
+#desc-error {
+  font: {
+    size: 25px;
+  }
+}

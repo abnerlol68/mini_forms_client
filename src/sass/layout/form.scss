@@ -1,2 +1,81 @@
 @import "../base/defaults";
+@import "../utils/buttonCustom";
 
+main form{
+  @include layoutGrid;
+  grid-row-gap: 1rem;
+}
+
+body {
+  background-color: rgba($color5, 0.8);
+}
+
+.quest {
+  @include layoutGrid;
+  background-color: $color5;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  padding: 15px;
+  row-gap: 20px;
+  width: 800px;
+  justify-items: stretch;
+  border: 2px solid $color3;
+}
+
+.quest__tittle {
+  color: $textLight;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.options {
+  color: $textLight;
+  display: grid;
+
+}
+
+.options.multiple-box-option {
+  grid-template-columns: 20px auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+}
+
+.quest_res_text {
+  width: 95%;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+  color: $color5;
+  font-weight: bold;
+  background-color: $color2;
+  border: none;
+  //border-bottom: 2px solid $color3;
+  box-shadow: $boxShadow;
+}
+
+.radio-custom, .check-custom {
+  font-family: $fonti;
+  border: 1px solid $color3;
+  background-color: rgba($color4, 0.7);
+  font-size: 18px;
+}
+
+.radio-custom { border-radius: 100%;}
+.check-custom {border-radius: $borderRadius}
+
+input[type=radio], input[type=checkbox] {
+  position: absolute;
+  left: -100%;
+}
+
+input[type=radio]:checked + .radio-custom:before {
+  content: "\e0b2";
+  font-family: $fonti;
+  color: $color3;
+}
+
+input[type=checkbox]:checked + .check-custom:before {
+  content: "\e11e";
+  font-family: $fonti;
+  color: $color3;
+}

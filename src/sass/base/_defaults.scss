@@ -1,6 +1,9 @@
 @import "../utils/colors";
 @import "../utils/fonts";
 
+$borderRadius: 5px;
+$boxShadow: 0 0 8px 2px $color4;
+
 * {
   font-family: $font1;
 }

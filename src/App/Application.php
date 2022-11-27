@@ -12,7 +12,7 @@ class Application {
   public function run(): void {
     session_start();
     $uri = $this->router->get_uri();
-
+//    var_dump($uri);
     $this->router->redirect($uri);
   }
 }
