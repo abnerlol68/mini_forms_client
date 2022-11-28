@@ -1,25 +1,20 @@
 @font-face {
   font-family: Helvi;
-  src: url("../Libs/fonts/Helvetica.woff2") format('woff2');
+  src: url("../libs/fonts/Helvetica/Helvetica.woff2") format('woff2'),
+  url("../libs/fonts/Helvetica/Helvetica.ttf") format('truetype'),
+  url("../libs/fonts/Helvetica/Helvetica.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
-
-//@font-face {
-//  font-family: arima;
-//  src: url("../Libs/fonts/Arima-VariableFont_wght.ttf") format('ttf');
-//  font-weight: 500;
-//}
-//
-//@font-face {
-//  font-family: bitter;
-//  src: url("../Libs/fonts/Bitter-VariableFont_wght.ttf") format('ttf');
-//  font-weight: 400;
-//}
 
 @font-face {
   font-family: typcn;
-  src: url("../Libs/fonts/typicons.woff2") format('woff2');
+  src: url("../libs/fonts/Typicons/typicons.eot") format("embedded-opentype"),
+  url("../libs/fonts/Typicons/typicons.woff2") format("woff2"),
+  url("../libs/fonts/Typicons/typicons.woff") format("woff"),
+  url("../libs/fonts/Typicons/typicons.ttf") format("truetype"),
+  url("../libs/fonts/Typicons/typicons.svg") format("svg");
 }
-
 $font1: Helvi, Arial, sans-serif;
 //$font: Helvi, Arial, sans-serif;
 //$font2: Consolas, "Times New Roman", "Arial Black";
