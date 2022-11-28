@@ -8,6 +8,6 @@
     },
     "require": {
       "ext-pdo": "*",
-      "ext-json": "*"
+        "vlucas/phpdotenv": "^5.5"
     }
 }

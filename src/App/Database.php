@@ -12,11 +12,11 @@ class Database {
   private string $password;
 
   public function __construct() {
-    $this->db = "miniforms";
-    $this->host = "127.0.0.1";
-    $this->port = "3306";
-    $this->user = "admin_miniforms";
-    $this->password = '_^g&zU$E{X3@_,bFy';
+    $this->db       = DB_NAME;
+    $this->host     = DB_HOST;
+    $this->port     = DB_PORT;
+    $this->user     = DB_USER;
+    $this->password = DB_PASS;
   }
 
   public function get_conn(): PDO {
