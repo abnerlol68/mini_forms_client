@@ -1,7 +1,5 @@
 <?php
-  $env = Dotenv\Dotenv::createImmutable(__DIR__);
-  $env->load();
-  define('URL', 'http://localhost/mini_forms_client/');
+  define('URL', 'https://miniforms-test.herokuapp.com/');
   define('ROOT', __DIR__.'/');
   define('DB_NAME', $_ENV['DB_NAME']);
   define('DB_HOST', $_ENV['DB_HOST']);
