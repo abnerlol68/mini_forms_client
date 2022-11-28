@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Not Found</title>
     <link rel="stylesheet" href="<?= URL . 'src/css/notFound.css' ?>">
+    <link rel="shortcut icon" href="<?= URL . 'src/img/favicon.png' ?>" type="image/x-icon">
 </head>
 <body>
     <div>

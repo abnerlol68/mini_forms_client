@@ -13,10 +13,10 @@ class Database {
 
   public function __construct() {
     $this->db = "miniforms";
-    $this->host = "localhost";
+    $this->host = "127.0.0.1";
     $this->port = "3306";
-    $this->user = "root";
-    $this->password = "Alucard29+";
+    $this->user = "admin_miniforms";
+    $this->password = '_^g&zU$E{X3@_,bFy';
   }
 
   public function get_conn(): PDO {

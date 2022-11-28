@@ -12,6 +12,7 @@
   <script src="<?= URL . 'src/App/Form.js' ?>" type="module"></script>
   <title>Form</title>
     <link rel="stylesheet" href="<?= URL . 'src/css/form.css' ?>">
+    <link rel="shortcut icon" href="<?= URL . 'src/img/favicon.png' ?>" type="image/x-icon">
 </head>
 <body>
   <p id="url" style="display: none;"><?= URL ?></p>

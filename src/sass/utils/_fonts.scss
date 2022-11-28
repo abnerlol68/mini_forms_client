@@ -1,29 +1,29 @@
 @font-face {
   font-family: Helvi;
-  src: url("../Libs/fonts/Helvetica.ttf");
+  src: url("../Libs/fonts/Helvetica.woff2") format('woff2');
 }
 
-@font-face {
-  font-family: arima;
-  src: url("../Libs/fonts/Arima-VariableFont_wght.ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: bitter;
-  src: url("../Libs/fonts/Bitter-VariableFont_wght.ttf");
-  font-weight: 400;
-}
+//@font-face {
+//  font-family: arima;
+//  src: url("../Libs/fonts/Arima-VariableFont_wght.ttf") format('ttf');
+//  font-weight: 500;
+//}
+//
+//@font-face {
+//  font-family: bitter;
+//  src: url("../Libs/fonts/Bitter-VariableFont_wght.ttf") format('ttf');
+//  font-weight: 400;
+//}
 
 @font-face {
   font-family: typcn;
-  src: url("../Libs/fonts/typicons.ttf");
+  src: url("../Libs/fonts/typicons.woff2") format('woff2');
 }
 
 $font1: Helvi, Arial, sans-serif;
-$font: Helvi, Arial, sans-serif;
-$font2: Consolas, "Times New Roman", "Arial Black";
-$font3: Roboto, sans-serif;
-$font4: bitter, "Arial Black";
-$font5: arima, Helvi;
+//$font: Helvi, Arial, sans-serif;
+//$font2: Consolas, "Times New Roman", "Arial Black";
+//$font3: Roboto, sans-serif;
+//$font4: bitter, "Arial Black";
+//$font5: arima, Helvi;
 $fonti: typcn;

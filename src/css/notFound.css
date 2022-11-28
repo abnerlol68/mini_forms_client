@@ -1,20 +1,10 @@
 @font-face {
   font-family: Helvi;
-  src: url("../Libs/fonts/Helvetica.ttf");
-}
-@font-face {
-  font-family: arima;
-  src: url("../Libs/fonts/Arima-VariableFont_wght.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: bitter;
-  src: url("../Libs/fonts/Bitter-VariableFont_wght.ttf");
-  font-weight: 400;
+  src: url("../Libs/fonts/Helvetica.woff2") format("woff2");
 }
 @font-face {
   font-family: typcn;
-  src: url("../Libs/fonts/typicons.ttf");
+  src: url("../Libs/fonts/typicons.woff2") format("woff2");
 }
 * {
   font-family: Helvi, Arial, sans-serif;

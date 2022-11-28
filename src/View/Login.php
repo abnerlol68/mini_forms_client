@@ -58,6 +58,7 @@
   <title>Login</title>
     <link rel="stylesheet" href="<?= URL . 'src/css/login.css'?>">
     <link rel="stylesheet" href="<?= URL . 'src/libs/icons/font/typicons.css' ?>">
+    <link rel="shortcut icon" href="<?= URL . 'src/img/favicon.png' ?>" type="image/x-icon">
 </head>
 <body>
   <p id="url" style="display: none;"><?= URL ?></p>
