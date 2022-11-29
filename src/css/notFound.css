@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Helvi;
+  src: url("../libs/fonts/Helvetica/Helvetica.woff2") format("woff2"), url("../libs/fonts/Helvetica/Helvetica.ttf") format("truetype"), url("../libs/fonts/Helvetica/Helvetica.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: typcn;
+  src: url("../libs/fonts/Typicons/typicons.eot") format("embedded-opentype"), url("../libs/fonts/Typicons/typicons.woff2") format("woff2"), url("../libs/fonts/Typicons/typicons.woff") format("woff"), url("../libs/fonts/Typicons/typicons.ttf") format("truetype"), url("../libs/fonts/Typicons/typicons.svg") format("svg");
+}
+* {
+  font-family: Helvi, Arial, sans-serif;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background-color: #f3f6fd;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  grid-template-rows: 45px auto 160px;
+  row-gap: 0;
+}
+
+* {
+  font-family: Helvi, Arial, sans-serif;
+}
+
+body {
+  grid-template-rows: 100%;
+}
+
+div {
+  display: grid;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+}
+
+#cod-error {
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+#desc-error {
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=notFound.css.map */
